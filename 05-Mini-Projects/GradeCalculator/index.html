@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>คำนวณ GPA</h1>
+    <form id="gradeForm">
+        <!-- วิชา 1 -->
+        <!-- <input type="text" id="course1" placeholder="รหัสวิชา 1" required> -->
+        <input type="number" id="score1" placeholder="คะแนนวิชา 1" min="0" max="100" required>
+        <input type="number" id="credit1" placeholder="หน่วยกิตวิชา 1" min="1" required>
+        
+        <!-- วิชา 2 -->
+        <!-- <input type="text" id="course2" placeholder="รหัสวิชา 2" required> -->
+        <input type="number" id="score2" placeholder="คะแนนวิชา 2" min="0" max="100" required>
+        <input type="number" id="credit2" placeholder="หน่วยกิตวิชา 2" min="1" required>
+        
+        <!-- วิชา 3 -->
+        <!-- <input type="text" id="course3" placeholder="รหัสวิชา 3" required> -->
+        <input type="number" id="score3" placeholder="คะแนนวิชา 3" min="0" max="100" required>
+        <input type="number" id="credit3" placeholder="หน่วยกิตวิชา 3" min="1" required>
+        
+        <!-- วิชา 4 -->
+        <!-- <input type="text" id="course4" placeholder="รหัสวิชา 4" required> -->
+        <input type="number" id="score4" placeholder="คะแนนวิชา 4" min="0" max="100" required>
+        <input type="number" id="credit4" placeholder="หน่วยกิตวิชา 4" min="1" required>
+        
+        <!-- วิชา 5 -->
+        <!-- <input type="text" id="course5" placeholder="รหัสวิชา 5" required> -->
+        <input type="number" id="score5" placeholder="คะแนนวิชา 5" min="0" max="100" required>
+        <input type="number" id="credit5" placeholder="หน่วยกิตวิชา 5" min="1" required>
+
+        <button type="button" onclick="calculateGPA()">คำนวณ GPA</button>
+    </form>
+
+    <h3>เกรดเฉลี่ย (GPA): <span id="gpaResult">-</span></h3>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Prompt', sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.container_1, .container_2, .container_3 {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.container_1:hover, .container_2:hover, .container_3:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+h1, h2 {
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+input {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #7986cb;
+    box-shadow: 0 0 0 3px rgba(121, 134, 203, 0.2);
+}
+
+button {
+    background-color: #7986cb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #5c6bc0;
+}
+
+p {
+    margin-top: 10px;
+    color: #555;
+}
+
+#formMessage {
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 15px;
+    display: none; /* เปลี่ยนแปลงเมื่อมีการแสดงข้อความ */
+}
+
+.success {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    display: block !important; /* แสดงเมื่อเป็นข้อความสำเร็จ */
+}
+
+.error {
+    background-color: #ffebee;
+    color: #c62828;
+    display: block !important; /* แสดงเมื่อเป็นข้อความผิดพลาด */
+}
+
+/* เพิ่มสไตล์สำหรับแต่ละคอนเทนเนอร์ */
+.container_1 {
+    border-left: 4px solid #7986cb;
+}
+
+.container_2 {
+    border-left: 4px solid #4db6ac;
+}
+
+.container_2 button {
+    background-color: #4db6ac;
+}
+
+.container_2 button:hover {
+    background-color: #26a69a;
+}
+
+.container_3 {
+    border-left: 4px solid #ff8a65;
+}
+
+.container_3 button {
+    background-color: #ff8a65;
+}
+
+.container_3 button:hover {
+    background-color: #ff7043;
+}
+
+/* แสดงผลข้อความทักทาย */
+#greeting {
+    font-weight: 500;
+    color: #4db6ac;
+    min-height: 24px;
+}
