@@ -8,7 +8,9 @@ function checkAge() {
     let age = document.getElementById("age").value;
     let result = "";
 
-    if (age < 13) {
+    if (age <= 0) {
+        result = "กรุณากรอกอายุจริง"
+    }else if (age < 13) {
         result = "เด็ก";
     } else if (age >= 13 && age <= 19) {
         result = "วัยรุ่น";
@@ -16,7 +18,7 @@ function checkAge() {
         result = "ผู้ใหญ่";
     }
 
-    document.getElementById("ageResult").innerText = `คุณเป็น: ${result}`;
+    document.getElementById("ageResult").innerText = `${result}`;
 }
 
 
@@ -29,11 +31,12 @@ function checkEvenOdd() {
 // For Loop แสดงเลข 1-10
 function showNumbers() {
     let output = "";
-    for (let i = 1; i <= 10; i++) {
+    for (let i = 50; i >= 1; i--) {
         output += i + " ";
     }
     document.getElementById("loopResult").innerText = output;
 }
+
 
 // While Loop รับค่าผู้ใช้
 function askUser() {
@@ -74,19 +77,19 @@ function bubbleSort() {
 }
 
 // Selection Sort
-function selectSort() {
-    let sortedNumbers = [...numbers]; // สร้างสำเนาของ array เพื่อไม่ให้เปลี่ยนแปลงตัวแปรหลัก
-    for (let i = 0; i < sortedNumbers.length; i++) {
-        let minIndex = i;
-        for (let j = i + 1; j < sortedNumbers.length; j++) {
-            if (sortedNumbers[j] < sortedNumbers[minIndex]) {
-                minIndex = j;
-            }
-        }
-        [sortedNumbers[i], sortedNumbers[minIndex]] = [sortedNumbers[minIndex], sortedNumbers[i]]; // สลับที่
-    }
-    document.getElementById("afterSort").innerText = `หลังเรียง (Selection Sort): ${sortedNumbers.join(", ")}`;
-}
+// function selectSort() {
+//     let sortedNumbers = [...numbers]; // สร้างสำเนาของ array เพื่อไม่ให้เปลี่ยนแปลงตัวแปรหลัก
+//     for (let i = 0; i < sortedNumbers.length; i++) {
+//         let minIndex = i;
+//         for (let j = i + 1; j < sortedNumbers.length; j++) {
+//             if (sortedNumbers[j] < sortedNumbers[minIndex]) {
+//                 minIndex = j;
+//             }
+//         }
+//         [sortedNumbers[i], sortedNumbers[minIndex]] = [sortedNumbers[minIndex], sortedNumbers[i]]; // สลับที่
+//     }
+//     document.getElementById("afterSort").innerText = `หลังเรียง (Selection Sort): ${sortedNumbers.join(", ")}`;
+// }
 
 
 
@@ -100,10 +103,10 @@ function selectSort() {
 // จบ
 
 function factorial(n) {
-    if (n === 1) return 1;
+    if (n === 0) return 1;
     return n * factorial(n - 1);
 }
-console.log(factorial(5)); // 120
+console.log("factorial",factorial(5)); // 120
 
 // สร้างฟังก์ชัน fibonacci
 
@@ -120,7 +123,7 @@ function fibonacciRecursive(n) {
     return fibonacciRecursive(n - 1) + fibonacciRecursive(n - 2);
 }
 
-console.log(fibonacciRecursive(10)); // 55
+console.log("fibonacci",fibonacciRecursive(10)); // 55
 
 // ----------------------------------------------
 
@@ -142,7 +145,7 @@ console.log("เริ่มต้น Exception Handling");
 try {
     console.log("กำลังดำเนินการหาร...");
     let num = 10;
-    let divisor = 0; // กำหนดตัวหารเป็น 0 ซึ่งอาจทำให้เกิดปัญหา
+    let divisor = 0;
     if (divisor === 0) {
         throw new Error("ไม่สามารถหารด้วยศูนย์ได้!");
     }

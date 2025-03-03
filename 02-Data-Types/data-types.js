@@ -32,8 +32,10 @@ function testObject() {
 }
 
 function testSetAndTuple() {
-  let mySet = new Set([1, 2, 3, 3, 4, 5]);
-  console.log(mySet);
+  let Beforeset = [1,2,3,3,4,5,5,6]
+  console.log("Before",Beforeset)
+  let mySet = new Set(Beforeset);
+  console.log("After",mySet);
 
   let myTuple = [10, 'Hello', true];
   console.log(myTuple);
@@ -72,3 +74,25 @@ document.getElementById("studentForm").addEventListener("submit", function(event
 
   console.log("ข้อมูลนักเรียน:", student);
 });
+
+document.getElementById("check-type").addEventListener("click", function () {
+  const userInput = document.getElementById("user-input").value;
+
+  let output = ''
+
+  if (userInput === '') {
+    output = "กรุณากรอกข้อมูล" 
+  } else {
+    const inputType = typeof userInput
+
+    if (!isNaN(userInput)){
+      output = `เป็นประเภท Number : ("${userInput}")`
+    } else if (userInput === "true" || userInput === "false") {
+      output = `เป็นประเเภท Boolean : ("${userInput}")`
+    } else {
+      output = `เป็นประเภท String : ("${userInput}")` 
+    }
+  }
+  document.getElementById("output_1").innerText = output;
+
+})
