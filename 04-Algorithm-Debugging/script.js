@@ -125,26 +125,34 @@ console.log(fibonacciRecursive(10)); // 55
 // ----------------------------------------------
 
 console.log("เริ่มต้น Debugging Tools");
+
+// ตัวอย่าง Debugging Tools
 let x = 10;
 console.log("ค่าของ x:", x);
 
-// let a = 5, b = 10;
-// let sumDebug = a + b;
-// debugger; // หยุดโค้ดที่บรรทัดนี้
-// console.log("ผลรวม:", sumDebug);
+let a = 5, b = 10;
+let sumDebug = a + b;
+debugger; // หยุดโค้ดที่บรรทัดนี้เมื่อใช้ DevTools เพื่อตรวจสอบค่า
+console.log("ผลรวมของ a + b:", sumDebug);
 
 console.log("สิ้นสุด Debugging Tools");
 
-console.log("เริ่มต้น try-catch");
+console.log("เริ่มต้น Exception Handling");
 
 try {
-    let result = 10 / 0;
+    console.log("กำลังดำเนินการหาร...");
+    let num = 10;
+    let divisor = 0; // กำหนดตัวหารเป็น 0 ซึ่งอาจทำให้เกิดปัญหา
+    if (divisor === 0) {
+        throw new Error("ไม่สามารถหารด้วยศูนย์ได้!");
+    }
+    let result = num / divisor;
     console.log("ผลลัพธ์:", result);
 } catch (error) {
-    console.log("เกิดข้อผิดพลาด:", error.message);
+    console.error("เกิดข้อผิดพลาด:", error.message);
+} finally {
+    console.log("จบการทำงานของ try-catch-finally");
 }
-
-console.log("สิ้นสุด try-catch-finally");
 
 
 // function validateAge() {
