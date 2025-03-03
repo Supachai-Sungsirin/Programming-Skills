@@ -1,7 +1,7 @@
 # นี่โปรเจคของฉัน
 
 ## คำอธิบาย
-นี่คือโปรเจค 01-Setup-Tools GitHub
+นี่คือโปรเจค Programing Skills GitHub
 
 ## การติดตั้ง
 ```bash
